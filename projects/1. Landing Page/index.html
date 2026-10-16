@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Landing Page</title>
+</head>
+<body>
+    <header class="header">
+        <a href="#"  class="logo">
+            <img src="resources/icono.png" class="logo-icon">
+            <p class="logo-text">DevSolutions</p>
+        </a>
+        <i class="menu-icon">
+            <svg  xmlns="http://www.w3.org/2000/svg" class="icon open-icon" width="24" height="24" viewBox="0 0 24 24" ><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+            <svg  xmlns="http://www.w3.org/2000/svg" class="icon close-icon" width="24" height="24" viewBox="0 0 24 24" ><path d="m7.76 14.83-2.83 2.83 1.41 1.41 2.83-2.83 2.12-2.12.71-.71.71.71 1.41 1.42 3.54 3.53 1.41-1.41-3.53-3.54-1.42-1.41-.71-.71 5.66-5.66-1.41-1.41L12 10.59 6.34 4.93 4.93 6.34 10.59 12l-.71.71z"></path></svg>
+        </i>
+
+        <nav class="navbar">
+            <a href="#about">Sobre nosotros</a>
+            <a href="#services">Servicios</a>
+            <a href="#projects">Proyectos</a>
+            <a href="#contact">Contacto</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <div class="hero-content">
+            <h1>Construye Tu Pagina Soñada</h1>
+            <h3 class="h3-1">Soluciones  Profesionales</h3>
+            <h3 class="h3-2">Para Hacer Crecer Tu Negocio</h3>
+            <a class="CTA CTA-1" href="#contact">Solicitar presupuesto</a>
+            <a class="CTA CTA-2" href="#services">Mas informacion</a>
+        </div>
+        
+    </section>
+
+    <section id="services">
+        <div class="service-section">
+            <div class="service-header">
+                <h3>Nuestos Servicios</h3>
+                <p>Qué Ofrecemos</p>
+            </div>
+            <div class="service-container">
+                <article class="service-card">
+                    <img src="resources/service-1.png" class="service-img">
+                    <p class="service-name">Diseño Web</p>
+                    <p class="service-description">Diseños modernos y responsivos</p>
+                </article>
+                <article class="service-card">
+                    <img src="resources/service-2.png" class="service-img">
+                    <p class="service-name">E-Commerce</p>
+                    <p class="service-description">Soluciones de tienda online</p>
+                </article>
+                <article class="service-card">
+                    <img src="resources/service-3.png" class="service-img">
+                    <p class="service-name">Optimizacion de SEO</p>
+                    <p class="service-description">Impulsa tus posicionamientos</p>
+                </article>
+            </div>
+        </div>
+
+        <div class="why-section">
+            <div class="why-header">
+            <h3>¿Por que Escogernos?</h3>
+        </div>
+        <div class="why-container">
+            <article class="why-card">
+                <img src="resources/reason-1.png" class="reason-img">
+                <p class="reason-name">Desarrolladores Expertos</p>
+                <p class="reason-description">Equipo especializado</p>
+            </article>
+            <article class="why-card">
+                <img src="resources/reason-2.png" class="reason-img">
+                <p class="reason-name">Rapido y Confiable</p>
+                <p class="reason-description">Respuesta rapida</p>
+            </article>
+            <article class="why-card">
+                <img src="resources/reason-3.png" class="reason-img">
+                <p class="reason-name">Atencion al Cliente</p>
+                <p class="reason-description">Personal asignado 24/7</p>
+            </article>
+        </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="projects-section">
+
+            <div class="projects-header">
+                <h3>Proyectos Recientes</h3>
+            </div>
+            <div class="projects-container">
+                <article class="project-card">
+                    <img src="resources/project-1.png" class="project-img">
+                    <p class="project-title">Proyecto Uno</p>
+                    <a href="#" class="project-btn CTA">Visitar Proyecto</a>
+                </article>
+                <article class="project-card">
+                    <img src="resources/project-2.png" class="project-img">
+                    <p class="project-title">Proyecto Dos</p>
+                    <a href="#" class="project-btn CTA">Visitar Proyecto</a>
+                </article>
+                <article class="project-card">
+                    <img src="resources/project-3.png" class="project-img">
+                    <p class="project-title">Proyecto Tres</p>
+                    <a href="#" class="project-btn CTA">Visitar Proyecto</a>
+                </article>
+            </div>
+        </div>
+        <div class="testimony-section">
+            <div class="testimony-header">
+                <h3>Testimonios</h3>
+                <p>Que Dicen Nuestros Clientes</p>
+            </div>
+            <div class="testimony-container">
+                <div class="testimony-card">
+                    <img src="resources/witness.png">
+                    <p class="testimony">“<span class="bold-text">¡Servicio increíble!</span> Nuestro sitio web luce fantástico y funciona de maravilla.” <br><br>
+                       <span class="signature">— Laura M., propietaria de negocio</span> 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        
+        <div class="contact-section">
+            <div class="contact-header">
+                <h3>Contactanos</h3>
+            </div>
+
+            <div class="contact-form">
+                <form class="form-container">
+                    <input type="text" placeholder="Nombre completo" class="nombre" autocomplete="off">
+                    <input type="email" placeholder="Correo electronico" class="email" autocomplete="off" max=" ">
+
+                    <textarea placeholder="Mensaje..." class="mensaje" autocomplete="off" rows="6" maxlength="250"></textarea>
+                    <input type="submit" value="Enviar Mensaje" class="submit CTA">
+                    
+                </form>
+                <div class="contact-info">
+                    <div class="email-info">
+                        <svg  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" ><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 2v.51l-8 6.22-8-6.22V6zM4 18V9.04l7.39 5.74c.18.14.4.21.61.21s.43-.07.61-.21L20 9.03v8.96H4Z"></path></svg>
+                        <a href="">info@devsolutions.com</a>
+                    </div>
+                    <div class="phone-info">
+                        <svg  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" ><path d="M18.07 22h.35c.47-.02.9-.26 1.17-.64l2.14-3.09c.23-.33.32-.74.24-1.14s-.31-.74-.64-.97l-4.64-3.09a1.47 1.47 0 0 0-.83-.25c-.41 0-.81.16-1.1.48l-1.47 1.59c-.69-.43-1.61-1.07-2.36-1.82-.72-.72-1.37-1.64-1.82-2.36l1.59-1.47c.54-.5.64-1.32.23-1.93L7.84 2.67c-.22-.33-.57-.57-.97-.64a1.46 1.46 0 0 0-1.13.24L2.65 4.41c-.39.27-.62.7-.64 1.17-.03.69-.16 6.9 4.68 11.74 4.35 4.35 9.81 4.69 11.38 4.69ZM6.88 10.05c-.16.15-.21.39-.11.59.05.09 1.15 2.24 2.74 3.84 1.6 1.6 3.75 2.7 3.84 2.75.2.1.44.06.59-.11l1.99-2.15 3.86 2.57-1.7 2.46c-1.16 0-6.13-.24-9.99-4.1S4 7.06 4 5.91l2.46-1.7 2.57 3.86-2.15 1.99Z"></path></svg>
+                        <a href="">(123) 456-7890</a>
+                    </div>
+                    <div class="social-medias">
+                        <a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#48f"><path d="M22.2125 5.65605C21.4491 5.99375 20.6395 6.21555 19.8106 6.31411C20.6839 5.79132 21.3374 4.9689 21.6493 4.00005C20.8287 4.48761 19.9305 4.83077 18.9938 5.01461C18.2031 4.17106 17.098 3.69303 15.9418 3.69434C13.6326 3.69434 11.7597 5.56661 11.7597 7.87683C11.7597 8.20458 11.7973 8.52242 11.8676 8.82909C8.39047 8.65404 5.31007 6.99005 3.24678 4.45941C2.87529 5.09767 2.68005 5.82318 2.68104 6.56167C2.68104 8.01259 3.4196 9.29324 4.54149 10.043C3.87737 10.022 3.22788 9.84264 2.64718 9.51973C2.64654 9.5373 2.64654 9.55487 2.64654 9.57148C2.64654 11.5984 4.08819 13.2892 6.00199 13.6731C5.6428 13.7703 5.27232 13.8194 4.90022 13.8191C4.62997 13.8191 4.36771 13.7942 4.11279 13.7453C4.64531 15.4065 6.18886 16.6159 8.0196 16.6491C6.53813 17.8118 4.70869 18.4426 2.82543 18.4399C2.49212 18.4402 2.15909 18.4205 1.82812 18.3811C3.74004 19.6102 5.96552 20.2625 8.23842 20.2601C15.9316 20.2601 20.138 13.8875 20.138 8.36111C20.138 8.1803 20.1336 7.99886 20.1256 7.81997C20.9443 7.22845 21.651 6.49567 22.2125 5.65605Z"></path></svg></a>
+                        <a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#43f"><path d="M15.4024 21V14.0344H17.7347L18.0838 11.3265H15.4024V9.59765C15.4024 8.81364 15.62 8.27934 16.7443 8.27934L18.1783 8.27867V5.85676C17.9302 5.82382 17.0791 5.75006 16.0888 5.75006C14.0213 5.75006 12.606 7.01198 12.606 9.32952V11.3265H10.2677V14.0344H12.606V21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H15.4024Z"></path></svg></a>
+                        <a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#4e"><path d="M18.3362 18.339H15.6707V14.1622C15.6707 13.1662 15.6505 11.8845 14.2817 11.8845C12.892 11.8845 12.6797 12.9683 12.6797 14.0887V18.339H10.0142V9.75H12.5747V10.9207H12.6092C12.967 10.2457 13.837 9.53325 15.1367 9.53325C17.8375 9.53325 18.337 11.3108 18.337 13.6245V18.339H18.3362ZM7.00373 8.57475C6.14573 8.57475 5.45648 7.88025 5.45648 7.026C5.45648 6.1725 6.14648 5.47875 7.00373 5.47875C7.85873 5.47875 8.55173 6.1725 8.55173 7.026C8.55173 7.88025 7.85798 8.57475 7.00373 8.57475ZM8.34023 18.339H5.66723V9.75H8.34023V18.339ZM19.6697 3H4.32923C3.59498 3 3.00098 3.5805 3.00098 4.29675V19.7033C3.00098 20.4202 3.59498 21 4.32923 21H19.6675C20.401 21 21.001 20.4202 21.001 19.7033V4.29675C21.001 3.5805 20.401 3 19.6675 3H19.6697Z"></path></svg></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>

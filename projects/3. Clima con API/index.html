@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <title>Weather App</title>
+</head>
+<body>
+
+  <div class="weather-app">
+    <form class="search-container">
+      <svg class="location-icon" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" transform="" id="injected-svg" xmlns="http://www.w3.org/2000/svg"><!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free--><path d="M16 10c0-2.21-1.79-4-4-4s-4 1.79-4 4 1.79 4 4 4 4-1.79 4-4m-6 0c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2"></path><path d="M11.42 21.81c.17.12.38.19.58.19s.41-.06.58-.19c.3-.22 7.45-5.37 7.42-11.82 0-4.41-3.59-8-8-8s-8 3.59-8 8c-.03 6.44 7.12 11.6 7.42 11.82M12 4c3.31 0 6 2.69 6 6 .02 4.44-4.39 8.43-6 9.74-1.61-1.31-6.02-5.29-6-9.74 0-3.31 2.69-6 6-6"></path></svg>
+      <div class="input-wraper">
+        <input class="search-input" type="text" placeholder="Nombre de la Ciudad...">
+        <button class="search-button" type="submit">
+          <svg class="search-icon" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" transform="" id="injected-svg" xmlns="http://www.w3.org/2000/svg"><!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free--><path d="m17.06 14.94-2.8-1.34A6.96 6.96 0 0 0 16 9c0-3.86-3.14-7-7-7S2 5.14 2 9s3.14 7 7 7c1.76 0 3.37-.66 4.6-1.74l1.34 2.8 5 5 2.12-2.12zM9 14c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5"></path></svg>
+        </button>
+      </div>
+    </form>
+
+    <div class="weather-container">
+      <div class="city-info">
+        <h1 class="city-name"></h1>
+        <h3 class="date"></h3>
+      </div>
+      <img class="weather-status" src="">
+      <div class="weather">
+        <h2 class="temperatura"></h2>
+        <p class="descripcion"></p>
+      </div>
+    </div>
+
+    <div class="weather-details">
+      <div class="humidity-container detail-container">
+        <abbr title="Humedad">
+          <svg class="humidity-icon detail-icon" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 22c4.41 0 8-3.59 8-8 0-7.49-7.2-11.69-7.5-11.87a.98.98 0 0 0-.99 0C11.2 2.3 4.01 6.5 4.01 14c0 4.41 3.59 8 8 8 Z M0-17.81c1.52 1.03 6 4.52 6 9.81 0 3.31-2.69 6-6 6s-6-2.69-6-6c0-5.28 4.48-8.78 6-9.81"></path></svg>
+        </abbr>
+        <p class="humidity-detail detail-value"></p>
+      </div>
+      <div class="apparent-container detail-container">
+        <abbr title="Sensacion Termica">
+          <svg class="apparent-icon detail-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M338.5-138.5Q280-197 280-280q0-48 21-89.5t59-70.5v-320q0-50 35-85t85-35q50 0 85 35t35 85v320q38 29 59 70.5t21 89.5q0 83-58.5 141.5T480-80q-83 0-141.5-58.5ZM440-520h80v-40h-40v-40h40v-80h-40v-40h40v-40q0-17-11.5-28.5T480-800q-17 0-28.5 11.5T440-760v240Z"/></svg>       
+        </abbr>
+        <p class="apparent-detail detail-value"></p>
+      </div>
+    </div>
+    
+    <div class="forecast-container">
+      <h3 class="forecast-heading">Pronostico de 5 dias</h3>
+      <div class="cards-container">
+        <div class="forecast-1 forecast-card">
+          <p class="forecast-date"></p>
+          <img class="forecast-img" src="">
+          <div class="temperatura-container">
+            <p class="temperatura-max"></p>
+            <p class="separador">/</p>
+            <p class="temperatura-min"></p>
+          </div>
+        </div>
+        <div class="forecast-2 forecast-card">
+          <p class="forecast-date"></p>
+          <img class="forecast-img" src="">
+          <div class="temperatura-container">
+            <p class="temperatura-max"></p>
+            <p class="separador">/</p>
+            <p class="temperatura-min"></p>
+          </div>
+        </div>
+        <div class="forecast-3 forecast-card">
+          <p class="forecast-date"></p>
+          <img class="forecast-img" src="">
+          <div class="temperatura-container">
+            <p class="temperatura-max"></p>
+            <p class="separador">/</p>
+            <p class="temperatura-min"></p>
+          </div>
+        </div>
+        <div class="forecast-4 forecast-card">
+          <p class="forecast-date"></p>
+          <img class="forecast-img" src="">
+          <div class="temperatura-container">
+            <p class="temperatura-max"></p>
+            <p class="separador">/</p>
+            <p class="temperatura-min"></p>
+          </div>
+        </div>
+        <div class="forecast-5 forecast-card">
+          <p class="forecast-date"></p>
+          <img class="forecast-img" src="">
+          <div class="temperatura-container">
+            <p class="temperatura-max"></p>
+            <p class="separador">/</p>
+            <p class="temperatura-min"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="details-container">
+      <div class="details-heading">
+        <svg class="details-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M440-280h80v-240h-80v240Zm68.5-331.5Q520-623 520-640t-11.5-28.5Q497-680 480-680t-28.5 11.5Q440-657 440-640t11.5 28.5Q463-600 480-600t28.5-11.5ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+        <h2 class="details-text">Detalles del Clima</h2>
+      </div>
+
+      <div class="details-content">
+        <div class="uv-container container">
+          <abbr title="Rayos Ultravioleta">
+            <svg class="uv-icon detail-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-28 346-160H160v-186L28-480l132-134v-186h186l134-132 134 132h186v186l132 134-132 134v186H614L480-28Zm141.5-310.5Q680-397 680-480t-58.5-141.5Q563-680 480-680t-141.5 58.5Q280-563 280-480t58.5 141.5Q397-280 480-280t141.5-58.5ZM480-140l100-100h140v-140l100-100-100-100v-140H580L480-820 380-720H240v140L140-480l100 100v140h140l100 100Z"/></svg>
+          </abbr>
+            <p class="uv-detail detail-value"></p>
+        </div>
+        <div class="visibility-container container">
+          <abbr title="Visibilidad">
+            <svg class="visibility-icon detail-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M607.5-372.5Q660-425 660-500t-52.5-127.5Q555-680 480-680t-127.5 52.5Q300-575 300-500t52.5 127.5Q405-320 480-320t127.5-52.5Zm-204-51Q372-455 372-500t31.5-76.5Q435-608 480-608t76.5 31.5Q588-545 588-500t-31.5 76.5Q525-392 480-392t-76.5-31.5ZM214-281.5Q94-363 40-500q54-137 174-218.5T480-800q146 0 266 81.5T920-500q-54 137-174 218.5T480-200q-146 0-266-81.5Z"/></svg>
+          </abbr>
+          <p class="visibility-detail detail-value"></p>
+        </div>
+        <div class="sunrise-container container">
+          <abbr title="Amanecer">
+            <svg class="sunrise-icon detail-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m734-556-56-58 86-84 56 56-86 86ZM80-160v-80h800v80H80Zm360-520v-120h80v120h-80ZM226-558l-84-86 56-56 86 86-58 56Zm-26 238q0-117 81.5-198.5T480-600q117 0 198.5 81.5T760-320H200Z"/></svg>
+          </abbr>
+          <p class="sunrise-detail detail-value"></p>
+        </div>
+        <div class="sunset-container container">
+          <abbr title="Anochecer">
+            <svg class="sunset-icon detail-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M560-80q-82 0-155-31.5t-127.5-86Q223-252 191.5-325T160-480.5q0-82.5 31.5-155t86-127Q332-817 405-848.5T560-880q54 0 105 14t95 40q-91 53-145.5 143.5T560-480q0 112 54.5 202.5T760-134q-44 26-95 40T560-80Z"/></svg>
+          </abbr>
+          <p class="sunset-detail detail-value"></p>
+        </div>
+        <div class="pressure-container container">
+          <abbr title="Presion Atmosferica">
+            <svg class="pressure-icon detail-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M447-328q32 14 64.5 1.5T554-372q29-97 52.5-194T649-762q-63 79-122.5 159T409-440q-20 29-8 63t46 49ZM205-160q-22 0-40.5-9.5T135-198q-28-48-42-100.5T79-406q1-80 34-151.5T201-683q55-54 127-85.5T480-800q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-400q0 54-14 105t-40 97q-11 19-30 28.5t-40 9.5H205Z"/></svg>
+          </abbr>
+          <p class="pressure-detail detail-value"></p>
+        </div>
+        <div class="wind-container container">
+          <abbr title="Viento">
+            <svg class="wind-icon detail-icon" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><<path d="M13 5.5C13 3.57 11.43 2 9.5 2 7.47 2 6.25 3.53 6.25 5h2c0-.42.39-1 1.25-1s1.5.67 1.5 1.5S10.33 7 9.5 7H2v2h7.5C11.43 9 13 7.43 13 5.5m2.5 9.5H8v2h7.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.25-.58-1.25-1h-2c0 1.47 1.22 3 3.25 3 1.93 0 3.5-1.57 3.5-3.5S17.43 15 15.5 15"></path><path d="M18 5c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2H2v2h16c2.21 0 4-1.79 4-4s-1.79-4-4-4M2 15h4v2H2z"></path></svg>
+          </abbr>
+          <p class="wind-detail detail-value"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

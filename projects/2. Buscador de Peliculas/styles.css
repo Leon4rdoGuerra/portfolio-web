@@ -1,0 +1,458 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #222;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.header {
+    background: linear-gradient(90deg, #000c 0%, #0006 100%);
+    padding: 2rem;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(1rem);
+}
+
+.logo {
+    font-size: 4rem;
+    font-weight: 600;
+    color: #e01;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.search-container {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.search-box {
+    flex: 1;
+    min-width: 30rem;
+    max-width: 50rem;
+    position: relative;
+}
+
+.search-input {
+    width: 100%;
+    padding: 1rem 2rem;
+    border: .2rem solid #333;
+    border-radius: 2.5rem;
+    background-color: #000c;
+    color: #fff;
+    font-size: 1.6rem;
+    outline: none;
+    transition: all .3s ease;
+
+    &:focus {
+        border-color: #e01;
+        box-shadow: 0 0 1rem #e016;
+    }
+}
+
+.filters {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+select {
+    padding: .8rem 1.5rem;
+    border-color: .1rem solid #333;
+    border-radius: 2rem; 
+    background-color: #000c;
+    color: #fff;
+    font-size: 1.4rem;
+    outline: none;
+    cursor: pointer;
+
+    &:focus {
+        border-color: #e01;
+    }
+}
+
+.clear-btn {
+    padding: .8rem 2rem;
+    background-color: #e01;
+    color: #fff;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-size: 1.4rem;
+    transition: background .3s ease;
+    display: none;
+
+    &:hover {
+        background-color: #b00;
+    }
+}
+
+.clear-btn.show {
+    display: inline-block;
+}
+
+.main-content {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.carousel-container {
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 1.5rem;
+    padding: 2rem 0;
+    scrollbar-width: none;
+}
+
+.trending-card {
+    position: relative;
+    min-width: 25rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all .3s ease;
+    background: linear-gradient(45deg, #e012, #000c);
+
+    &:hover {
+        scale: 1.05;
+        box-shadow: 0 0 1rem #e01;
+    }
+}
+
+.trending-card .movie-poster {
+    width: 100%;
+    object-fit: contain;
+    transition: transform .3s ease;
+}
+
+.trending-rank {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    background: #000c;
+    color: #e01;
+    font-size: 4rem;
+    font-weight: bold;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    z-index: 5;
+    text-shadow: .2rem .2rem .4rem #000c;
+    border: .2rem solid #e01;
+}
+
+.trending-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, #000);
+    padding: 4rem 2rem 2rem;
+    color: #fff;
+}
+
+.trending-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: .8rem;
+    text-shadow: .2rem .2rem .4rem #000c;
+}
+
+.trending-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+    opacity: .9;
+}
+
+.trending-genres {
+    font-size: 1.5rem;
+    color: #ccc;
+    margin-top: .5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.trending-rating {
+    background-color: #e01;
+    padding: .4rem .8rem;
+    border-radius: 1.2rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000c;
+    color: #fff;
+    border: none;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 5;
+    transition: all .3s ease;
+    backdrop-filter: blur(1rem);
+
+    &:hover {
+        background-color: #e01c;
+        transform: translateY(-50%) scale(1.1);
+    }
+}
+
+.carousel-btn.trendingPrev {
+    left: -10px;
+}
+
+.carousel-btn.trendingNext {
+    right: -10px;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.movie-card {
+    background-color: #fff1;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all .3s ease;
+    cursor: pointer;
+    backdrop-filter: blur(1rem);
+    border: .1rem solid #fff2;
+
+    &:hover {
+        box-shadow: 0 2rem 4rem #0006;
+        border-color: #e01;
+    }
+}
+
+.movie-poster {
+    width: 100%;
+    object-fit: contain;
+    transition: transform .3s ease;
+}
+
+.movie-info {
+    padding: 1.5rem;
+}
+
+.movie-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: .8rem;
+    color: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.movie-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    color: #ccc;
+}
+
+.movie-genres {
+    font-size: 1.5rem;
+    color: #ccc;
+    margin-top: .5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 1rem;
+}
+
+.modal-btn {
+    margin: 1rem;
+    padding: 1rem;
+    width: 90%;
+    background-color: #e01;
+    color: #fff;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-size: 1.8rem;
+    transition: background .3s ease;
+
+    &:hover {
+        background-color: #b00;
+    }
+}
+
+.movie-rating {
+    background-color: #e01;
+    padding: .4rem .8rem;
+    border-radius: 1.2rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; 
+  height: 100%;
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.modal {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: #222;
+  width: 90%; /* ocupa casi toda la pantalla */
+  max-height: 90%;
+  border-radius: 1rem;
+  padding: 2rem;
+  overflow-y: auto; /* scroll interno si el contenido es largo */
+  overflow-x: hidden;
+  scrollbar-width: none;
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.poster-container {
+    margin-right: 2rem;
+}
+
+.details-container {
+    display: grid;
+    grid-template-rows: max-content max-content max-content;
+}
+
+.modal-title {
+    font-size: 4rem;
+    border-bottom: .2rem solid #fff3;
+}
+
+.modal-stats {
+    font-size: 2rem;
+    margin: 2rem 0;
+    padding-bottom: 2rem;
+    border-bottom: .2rem solid #fff3;
+}
+
+.modal-stats span {
+    color: #fffa;
+}
+
+.modal-sinopsis {
+    font-size: 2.5rem;
+}
+
+.modal-sinopsis span {
+    display: block;
+    font-size: 1.8rem;
+    color: #fffa;
+    margin-left: 1rem;
+}
+
+.close-modal {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.error {
+    text-align: center;
+    padding: 4rem;
+    color: #e01;
+    font-size: 2rem;
+}
+
+.no-results {
+    text-align: center;
+    padding: 6rem 2rem;
+    color: #ccc;
+}
+
+.no-results h2 {
+    font-size: 3.2rem;
+    margin-bottom: 1.5rem;
+}
+
+
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column;
+    }
+
+    .search-box {
+        min-width: 100%;
+    }
+
+    .filters {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .movies-grid {
+        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+        gap: 1.5rem;
+    }
+    .carousel-btn {
+        display: none;
+    }
+
+    .section-title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .trending-card {
+        min-width: 20rem;
+    }
+
+    .trending-rank {
+        font-size: 3rem;
+        padding: .5rem 1.5rem;
+    }
+}

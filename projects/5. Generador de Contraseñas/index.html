@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Password Generator</title>
+</head>
+<body>
+    <div class="app-container">
+        <h1 class="app-title">Generador de Contraseñas</h1>
+        <div class="password-container">
+            <input type="text" class="password-output" value="Aqui aparecera tu contraseña">
+            <svg class="copy-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3"><path d="M360-240q-33 0-56.5-23.5T280-320v-480q0-33 23.5-56.5T360-880h360q33 0 56.5 23.5T800-800v480q0 33-23.5 56.5T720-240H360Zm0-80h360v-480H360v480ZM200-80q-33 0-56.5-23.5T120-160v-560h80v560h440v80H200Zm160-240v-480 480Z"/></svg>
+        </div>
+        <div class="settings">
+            <div class="details-container">
+                <p class="length">Longitud: <span class="length-value">6</span></p>
+                <p class="strength">Fuerza: <span class="strength-value">Debil</span></p>
+            </div>
+            <div class="length-box">
+                <input type="range" min="6" max="20" class="length-input">
+            </div>
+            <p class="prefferences-header">Ajustes</p>
+            <div class="prefferences-box">
+                <div class="prefference-item">
+                    <label for="password-uppercase">Incluir Mayusculas</label>
+                    <input type="checkbox" id="password-uppercase" class="password-uppercase">
+                </div>
+                <div class="prefference-item">
+                    <label for="password-lowercase">Incluir Minusculas</label>
+                    <input type="checkbox" id="password-lowercase" class="password-lowercase">
+                </div>
+                <div class="prefference-item">
+                    <label for="password-numbers">Incluir Numeros</label>
+                    <input type="checkbox" id="password-numbers" class="password-numbers">
+                </div>
+                <div class="prefference-item">
+                    <label for="password-specials">Incluir Simbolos</label>
+                    <input type="checkbox" id="password-specials" class="password-symbols">
+                </div>
+            </div>
+        </div>
+        <button class="generate-btn">Generar Contraseña</button>
+    </div>
+</body>
+</html>

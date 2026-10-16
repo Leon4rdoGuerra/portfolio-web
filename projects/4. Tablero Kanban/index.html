@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Tablero Kanban</title>
+</head>
+<body>
+    <div class="app-container">
+        <div class="toDo-column column">
+            <div class="toDo-heading heading">Por Hacer</div>
+            <div class="toDo-cards cards-container"></div>
+            <button class="add-btn">
+                <svg class="add-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg>
+                <span class="add-text">Añadir Tarea</span>
+            </button>
+        </div>
+        <div class="inProgress-column column">
+            <div class="inProgress-heading heading">En Progreso</div>
+            <div class="inProgress-cards cards-container"></div>
+        </div>
+        <div class="completed-column column">
+            <div class="completed-heading heading">Completado</div>
+            <div class="completed-cards cards-container"></div>
+            <div class="delete-zone">
+                <svg class="delete-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
+                <span class="delete-text">Eliminar Tarea</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

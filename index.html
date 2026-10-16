@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>  <!--Email JS library-->
+    <title>Portfolio Web</title>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="header-logo">Portfolio</a>
+        <i class="menu-icon">
+            <svg class="close-menu" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            <svg class="open-menu" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </i>
+        <nav class="navbar">
+            <a href="#home" class="link active">Inicio</a>
+            <a href="#about" class="link">Sobre mi</a>
+            <a href="#skills" class="link">Habilidades</a>
+            <a href="#projects" class="link">Proyectos</a>
+            <a href="#contact" class="link">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hola, soy</h3>
+            <h1>Leonardo Guerra</h1>
+            <h3>Soy un <span>Desarrollador Front-End</span></h3>
+            <p>Transformo tus ideas en experiencias digitales memorables</p>
+            <a href="#contact" class="contact-btn CTA">¡Contactame!</a>
+        </div>
+        <div class="home-img">
+            <img src="resources/Foto.png">
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="resources/Foto.png">
+        </div>
+        <div class="about-content">
+            <div class="about-heading">Sobre <span>Mi</span></div>
+            <div class="about-info">Soy Leonardo, un desarrollador frontend autodidacta de 17 años con más de 4 años de experiencia creando interfaces modernas, funcionales y visualmente atractivas. Aunque aún no he cursado estudios universitarios, mi pasión por el desarrollo web me ha llevado a dominar tecnologías como HTML, CSS, JavaScript y React (entre otras), construyendo proyectos que combinan diseño y rendimiento. Aprendí por mi cuenta, enfrentando desafíos reales y resolviéndolos con curiosidad y perseverancia. Me encanta transformar ideas en experiencias digitales que conecten con las personas. Este portfolio es una muestra de lo que puedo hacer, y de lo mucho que estoy dispuesto a seguir aprendiendo. Mi meta es seguir creciendo, colaborar en proyectos que me reten y, algún día, liderar soluciones que marquen la diferencia.</div>
+            <a href="#projects" class="CTA">Ver Proyectos</a>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <div class="skills-heading">Habilidades <span>Profesionales</span></div>
+        <div class="skills-container">
+            <div class="skill">
+                <img src="resources/HTML.svg">
+                <p>Avanzado</p>
+            </div>
+            <div class="skill">
+                <img src="resources/CSS.svg">
+                <p>Avanzado</p>
+            </div>
+            <div class="skill">
+                <img src="resources/JS.svg">
+                <p>Avanzado</p>
+            </div>
+            <div class="skill">
+                <img src="resources/React.svg">
+                <p>Intermedio</p>
+            </div>
+            <div class="skill">
+                <img src="resources/Git.svg">
+                <p>Avanzado</p>
+            </div>
+        </div>
+        <div class="tools-container">
+            <div class="tool">Ingles (B2)</div>
+            <div class="tool">Portugues (B1)</div>
+            <div class="tool">Español (Nativo)</div>
+            <div class="tool">Diseño Responsive</div>
+            <div class="tool">Conocimientos UX/UI</div>
+            <div class="tool">Optimizacion de SEO</div>
+            <div class="tool">Deploy de Proyectos</div>
+            <div class="tool">Conocimiento sobre Algoritmos</div>
+            <div class="tool">Alojamiento de Paginas</div>
+            <div class="tool">Depuracion</div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <div class="projects-heading">Proyectos <span>Recientes</span></div>
+        <div class="projects-container">
+            <div class="project-card">
+                <div class="img-container">
+                    <img src="projects/1. Landing Page/resources/Portada.jpeg" alt="" class="project-img">
+                    <div class="img-overlay"></div>
+                    <h2 class="project-title">Landing Page</h2>
+                </div>
+                <button class="project-btn">Ver Proyecto</button>
+            </div>
+            <div class="project-card">
+                <div class="img-container">
+                    <img src="projects/2. Buscador de Peliculas/resources/Portada.jpeg" alt="" class="project-img">
+                    <div class="img-overlay"></div>
+                    <h2 class="project-title">Buscador de Peliculas</h2>
+                </div>
+                <button class="project-btn">Ver Proyecto</button>
+            </div>
+            <div class="project-card">
+                <div class="img-container">
+                    <img src="projects/3. Clima con API/resources/Portada.jpeg" alt="" class="project-img">
+                    <div class="img-overlay"></div>
+                    <h2 class="project-title">Aplicacion de Clima</h2>
+                </div>
+                <button class="project-btn">Ver Proyecto</button>
+            </div>
+            <div class="project-card">
+                <div class="img-container">
+                    <img src="projects/4. Tablero Kanban/resources/Portada.jpeg" alt="" class="project-img">
+                    <div class="img-overlay"></div>
+                    <h2 class="project-title">Tablero Kanban</h2>
+                </div>
+                <button class="project-btn">Ver Proyecto</button>
+            </div>
+            <div class="project-card">
+                <div class="img-container">
+                    <img src="projects/5. Generador de Contraseñas/resources/Portada.jpeg" alt="" class="project-img">
+                    <div class="img-overlay"></div>
+                    <h2 class="project-title">Generador de Contraseñas</h2>
+                </div>
+                <button class="project-btn">Ver Proyecto</button>
+            </div>
+            <div class="project-card">
+                <div class="img-container">
+                    <img src="projects/6. Formulario de Login/resources/Portada.jpeg" alt="" class="project-img">
+                    <div class="img-overlay"></div>
+                    <h2 class="project-title">Formulario de Login</h2>
+                </div>
+                <button class="project-btn">Ver Proyecto</button>
+            </div>
+        </div>  
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-heading">¡Contactame!</div>
+        <form action="" class="contact-form">
+            <label class="input-container input-name">
+                <input type="text" class="name" name="user_name" placeholder=" " maxlength="40">
+                <p>Nombre Completo</p>
+            </label>
+            <label class="input-container input-email">
+                <input type="text" class="email" name="user_email" placeholder=" " maxlength="40">
+                <p>Correo Electronico</p>
+            </label>
+            <label class="input-container input-message">
+                <textarea class="message" name="user_message" placeholder=" " cols="10" rows="7" maxlength="400"></textarea>
+                <p>Mensaje</p>
+            </label>
+            <button class="CTA submit-btn" type="submit">Enviar Mensaje</button>
+        </form>
+        <div class="contact-text">¿Tienes alguna idea en mente? Contáctame y hablemos sobre ello.</div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-text">Copyright ©2027 por Leonardo Guerra | Todos los derechos reservados.</div>
+        <a href="#home">
+            <svg class="icon-top" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M440-240v-368L296-464l-56-56 240-240 240 240-56 56-144-144v368h-80Z"/></svg>
+        </a>
+    </footer>
+</body>
+</html>

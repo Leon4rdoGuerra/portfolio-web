@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>TheMovieSearcher</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">TheMovieSearcher</div>
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Buscar peliculas...">
+            </div>
+            <div class="filters">
+                <select class="genreFilter">
+                    <option value="">Todos los generos</option>
+                </select>
+                <select class="yearFilter">
+                    <option value="">Todos los años</option>
+                </select>
+                <select class="sortFilter">
+                    <option value="">Ordenar por</option>
+                    <option value="popularity.desc">Mas popular</option>
+                    <option value="vote_average.desc">Calificacion mas alta</option>
+                    <option value="release_date.desc">Ultimo estreno</option>
+                    <option value="title.asc">A-Z</option>
+                </select>
+            </div>
+            <button class="clear-btn">Clear All</button>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="trendingSection">
+            <div class="section-title">En tendencia</div>
+            <div class="carousel-container">
+                <button class="carousel-btn trendingPrev"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg></button>
+                <div class="carousel trending-carousel"></div>
+                <button class="carousel-btn trendingNext"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg></button>
+            </div>
+        </div>
+        <div class="section-title randomSectionTitle">Descubre Peliculas</div>
+        <div class="movies-grid"></div>
+    </div>
+</body>
+</html>
